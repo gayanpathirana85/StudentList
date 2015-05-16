@@ -24,4 +24,15 @@
 
     <bean id="studentService" class="net.student.service.StudentServiceImpl" init-method="loadStudentDatafromXML"/>
 
+     <bean id="customPropertyPlaceholderConfigurer" class="net.common.CustomPropertyPlaceholderConfigurer"
+          lazy-init="false">
+        <property name="locations">
+            <list>
+
+                <value>classpath:dataAccess.properties</value>
+
+            </list>
+        </property>
+        <property name="fileEncoding" value="utf-8"/>
+    </bean>
 </beans>

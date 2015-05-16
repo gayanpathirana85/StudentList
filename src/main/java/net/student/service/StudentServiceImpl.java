@@ -27,6 +27,10 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     CustomPropertyPlaceholderConfigurer propertyPlaceholderConfigurer;
 
+    /**
+     * Load Data from XML file to Application Cache
+     * this method is calling as Init method
+     */
     private void loadStudentDatafromXML() {
 
         try {
@@ -43,6 +47,12 @@ public class StudentServiceImpl implements StudentService {
         }
     }
 
+    /**
+     *
+     * @param student
+     * Update or insert student object to the Cache
+     *  and update XML
+     */
     @Override
     public synchronized void updateStudent(Student student) {
 
@@ -54,6 +64,11 @@ public class StudentServiceImpl implements StudentService {
 
     }
 
+    /**
+     *
+     * @param studentMapDTO
+     * Writes StudentMapDTO object to the XML file
+     */
     private synchronized void updateXML(StudentMapDTO studentMapDTO) {
 
         try {
@@ -72,11 +87,19 @@ public class StudentServiceImpl implements StudentService {
 
     }
 
+    /**
+     * Get cached Student data hash table
+     * @return
+     */
     @Override
     public Map<String, Student> getStudentDataMap() {
         return studentMap;
     }
 
+    /**
+     * Delete student Object from cache and XML file
+     * @param student
+     */
     @Override
     public void deleteStudent(Student student) {
 

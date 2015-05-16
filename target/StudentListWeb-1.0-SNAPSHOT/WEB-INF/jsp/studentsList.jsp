@@ -24,7 +24,7 @@
 </div>
 <!-- Table goes in the document BODY -->
 <div>
-    <table class="imagetable" align="center">
+    <table class="student_table" align="center">
         <tr>
             <th>
                 <button type="button" onclick="window.location.href='/addNewStudent'">Add New</button>
@@ -59,9 +59,6 @@
                            id="firstName${entry.value.studentNumber}"/></td>
                 <td><input type='text' value='${entry.value.lastName}' disabled="true"
                            id="lastName${entry.value.studentNumber}"/></td>
-                    <%--        <td><input  type='text' value='${entry.value.gender}' disabled="true" id="gender${entry.value.studentNumber}"/></td>
-               <td><input  type='text' value='${entry.value.disability}' disabled="true" id="disability${entry.value.studentNumber}"/></td>--%>
-
 
                 <td><select disabled="true" id="gender${entry.value.studentNumber}">
                     <option value='${entry.value.gender}'>${entry.value.gender}</option>
@@ -101,7 +98,7 @@
 
 <script type="text/javascript">
 
-    // enableall the input boxes
+    // enable all the input boxes
     function editStudent(id) {
 
 

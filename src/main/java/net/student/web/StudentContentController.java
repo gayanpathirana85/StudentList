@@ -27,6 +27,11 @@ public class StudentContentController {
     @Autowired
     StudentService studentService;
 
+    /**
+     * request Mapping for displayAllStudents
+     * @param modelMap
+     * @return
+     */
     @RequestMapping(value = "/displayAllStudents")
     public String getdisplayAllStudents(ModelMap modelMap) {
 
@@ -35,6 +40,12 @@ public class StudentContentController {
         return "/studentsList";
     }
 
+    /**
+     * request Mapping for updateStudent ajax call
+     * @param modelMap
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/updateStudent", method = {RequestMethod.POST})
     @ResponseBody
     public String updateStudent(ModelMap modelMap, HttpServletRequest request) {
@@ -65,6 +76,12 @@ public class StudentContentController {
         return status;
     }
 
+    /**
+     * request Mapping for deleteStudent ajax call
+     * @param modelMap
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/deleteStudent", method = {RequestMethod.POST})
     @ResponseBody
     public String deleteStudent(ModelMap modelMap, HttpServletRequest request) {
@@ -80,6 +97,11 @@ public class StudentContentController {
         return status;
     }
 
+    /**
+     * request Mapping for  addNewStudent form
+     * @param modelMap
+     * @return
+     */
 
     @RequestMapping(value = "/addNewStudent")
     public String getaddNewStudent(ModelMap modelMap) {
@@ -88,6 +110,12 @@ public class StudentContentController {
         return "/addStudentForm";
     }
 
+    /**
+     *request Mapping for addStudent
+     * @param modelMap
+     * @param request
+     * @return
+     */
     @RequestMapping(value = "/addStudent", method = {RequestMethod.POST})
     @ResponseBody
     public String addStudent(ModelMap modelMap, HttpServletRequest request) {

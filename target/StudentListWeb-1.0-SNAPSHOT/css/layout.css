@@ -1,4 +1,4 @@
-table.imagetable {
+table.student_table {
     align: center;
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
@@ -8,7 +8,7 @@ table.imagetable {
     border-collapse: collapse;
 }
 
-table.imagetable th {
+table.student_table th {
     background: #b5cfd2 url('/images/cell-blue.jpg');
     border-width: 1px;
     padding: 8px;
@@ -16,7 +16,7 @@ table.imagetable th {
     border-color: #999999;
 }
 
-table.imagetable td {
+table.student_table td {
     background: #dcddc0 url('/images/cell-grey.jpg');
     border-width: 1px;
     padding: 8px;

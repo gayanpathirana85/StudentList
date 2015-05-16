@@ -24,7 +24,7 @@
 </div>
 <!-- Table goes in the document BODY -->
 <div>
-    <table class="imagetable" align="center">
+    <table class="student_table" align="center">
         <tr>
             <th>
                 <button type="button" onclick="window.location.href='/addNewStudent'">Add New</button>

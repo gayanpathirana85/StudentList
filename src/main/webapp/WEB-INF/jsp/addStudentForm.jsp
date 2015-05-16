@@ -26,7 +26,7 @@
 <div>
 
 
-    <table class="imagetable" align="center">
+    <table class="student_table" align="center">
 
         <tr>
             <th>Student Number</th>
